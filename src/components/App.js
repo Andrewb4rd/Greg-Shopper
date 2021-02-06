@@ -1,28 +1,25 @@
-import React, { useState, useEffect } from 'react';
-
-import {
-  getSomething
-} from '../api';
+import React, { useState, useEffect } from "react";
+import Header from "./Header";
+import Body from "./Body";
 
 const App = () => {
-  const [message, setMessage] = useState('');
+  const [user, setUser] = useState({ username: "Guest" });
+  const [token, setToken] = useState("");
 
   useEffect(() => {
-    getSomething()
-      .then(response => {
-        setMessage(response.message);
-      })
-      .catch(error => {
-        setMessage(error.message);
-      });
-  });
+    console.log("Token: ", token);
+  }, [token]);
+
+  useEffect(() => {
+    console.log("User: ", user);
+  }, [user]);
 
   return (
     <div className="App">
-      <h1>Hello, World!</h1>
-      <h2>{ message }</h2>
+      <Header setToken={setToken} user={user} setUser={setUser} />
+      <Body user={user} />
     </div>
   );
-}
+};
 
 export default App;

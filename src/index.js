@@ -1,11 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
+import React from "react";
+import ReactDOM from "react-dom";
 import {
-  App
-} from './components';
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  NoMatch,
+} from "react-router-dom";
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+import { App, Cart, Orders } from "./components";
+
+let routes = (
+  <Router>
+    <Switch>
+      <Route exact path="/">
+        <App />
+      </Route>
+      <Route path="/Cart">
+        <Cart />
+      </Route>
+      <Route path="/Orders">
+        <Orders />
+      </Route>
+    </Switch>
+  </Router>
 );
+
+ReactDOM.render(routes, document.getElementById("root"));

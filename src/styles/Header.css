@@ -1,0 +1,94 @@
+#header {
+  height: 5em;
+  background-color: white;
+  overflow: hidden;
+  top: 0;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.headerColumn1 {
+  display: flex;
+  height: 5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerColumn3 {
+  display: flex;
+  height: 5em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.HC3R1 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.HC3R2 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.HC3R1 .btn {
+  margin-right: 1px;
+  margin-bottom: 1px;
+  width: 82px;
+  padding: 3px 12px;
+}
+
+.HC3R2 .btn {
+  margin-right: 1px;
+  width: 82px;
+  padding: 3px 12px;
+}
+
+.input-group {
+  margin-top: 1.3em;
+}
+
+.logo {
+  display: flex;
+  font-family: Pacifico;
+  font-size: 35px;
+}
+
+.logoShort {
+  display: none;
+  font-family: Pacifico;
+  font-size: 35px;
+}
+
+.registerRow {
+  display: flex;
+  justify-content: center;
+}
+
+.loginRow {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 852px) {
+  .logo {
+    display: none;
+  }
+  .logoShort {
+    display: flex;
+  }
+  .HC3R1 .btn {
+    margin-right: 1px;
+    margin-bottom: 1px;
+    width: 65px;
+    padding: 3px 1px;
+  }
+
+  .HC3R2 .btn {
+    margin-right: 1px;
+    width: 65px;
+    padding: 3px 1px;
+  }
+}

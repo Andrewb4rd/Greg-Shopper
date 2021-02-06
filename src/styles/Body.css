@@ -1,0 +1,81 @@
+.mb-2 {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 2.5em;
+  overflow: hidden;
+}
+
+.cardHeader {
+  font-family: "Roboto-slab";
+  font-size: large;
+}
+
+.bodyRow1 {
+  display: flex;
+  margin-top: 2.5em;
+  padding: 0 8em;
+  justify-content: center;
+}
+
+.bodyRow2 {
+  display: flex;
+  margin-top: 2.5em;
+  height: 5em;
+  justify-content: center;
+}
+
+.topButton {
+  width: 100%;
+}
+
+/* hover creds Francisco Kataldo */
+
+.hoverPrice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4c5e5e;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+  transform: translate(0px, 70px);
+  -webkit-transform: translate(0px, 70px);
+  -moz-transform: translate(0px, 70px);
+  -o-transform: translate(0px, 70px);
+  -ms-transform: translate(0px, 70px);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.hoverPrice span {
+  font-size: 40px;
+  color: rgb(255, 251, 251);
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mb-2:hover .hoverPrice {
+  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.mb-2:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 852px) {
+  .bodyRow1 {
+    padding: 0 2em;
+  }
+}
